@@ -1,10 +1,9 @@
 import axios from 'axios'
 
 const api = axios.create({
-  baseURL: '/api',
+  baseURL: 'https://safe-handover.onrender.com',
   headers: { 'Content-Type': 'application/json' },
 })
-
 export const getDashboardSummary = () => api.get('/dashboard/summary').then(r => r.data)
 export const getHandovers = () => api.get('/handovers').then(r => r.data)
 export const analyzeHandover = (payload) => api.post('/handovers/analyze', payload).then(r => r.data)
