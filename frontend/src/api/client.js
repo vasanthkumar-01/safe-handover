@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const api = axios.create({
-  baseURL: 'https://safe-handover.onrender.com',
+  baseURL: 'https://safe-handover.onrender.com/api',
   headers: { 'Content-Type': 'application/json' },
 })
 export const getDashboardSummary = () => api.get('/dashboard/summary').then(r => r.data)
